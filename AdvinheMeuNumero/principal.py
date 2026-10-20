@@ -466,7 +466,7 @@ while parar == False:
                         num_segurança3 = tentativa
                         cont2 += 1
                         print(f"O Computador está pensando em um número...")
-                        sleep(4)
+                        sleep(7)
                         print(f"O Computador pensou no número {tentativa:.0f}")
                         break
                     elif num_segurança1 > secreto and num_segurança2 < secreto:
@@ -478,7 +478,7 @@ while parar == False:
                         num_segurança3 = tentativa
                         cont2 += 1
                         print(f"O Computador está pensando em um número...")
-                        sleep(4)
+                        sleep(7)
                         print(f"O Computador pensou no número {tentativa:.0f}")
                         break
 
@@ -490,7 +490,7 @@ while parar == False:
                         tentativa = num_segurança1 / 2
                         cont2 += 1
                         print(f"O Computador está pensando em um número...")
-                        sleep(4)
+                        sleep(7)
                         print(f"O Computador pensou no número {tentativa:.0f}")
                         break
 
@@ -502,7 +502,7 @@ while parar == False:
                         tentativa = num_segurança1 + (100 - num_segurança1) / 2
                         cont2 += 1
                         print(f"O Computador está pensando em um número...")
-                        sleep(4)
+                        sleep(7)
                         print(f"O Computador pensou no número {tentativa:.0f}")
                         break
 
