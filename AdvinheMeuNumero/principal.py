@@ -7,7 +7,7 @@ def regras():
     print("\033[m")
     print("\033[36m-\033[m Jogadores: 1 ou 2")
     print("\033[36m-\033[m Rodadas: 2")
-    print("\033[36m-\033[m O Jogador 1 escolhe um número secreto de 1 a 100")
+    print("\033[36m-\033[m O Jogador 1 escolhe um número secreto de 1 a 500")
     print("\033[36m-\033[m O Jogador 2 tenta advinhar o número secreto escolhido pelo Jogador 1")
     print("\033[36m-\033[m A cada tentativa errada, é mostrado na tela se o número secreto é menor ou maior")
     print("\033[36m-\033[m O Jogador 2 tem chances ilimitadas para advinhar o número secreto")
@@ -138,12 +138,12 @@ while parar == False:
 
             while True:
                 try:
-                    secreto = int(input(f"\n{Jogador1}, escolha um \033[32mnúmero secreto\033[m de 1 a 100: "))
-                    if not secreto > 0 or not secreto < 101:
-                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    secreto = int(input(f"\n{Jogador1}, escolha um \033[32mnúmero secreto\033[m de 1 a 500: "))
+                    if not secreto > 0 or not secreto < 501:
+                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                         continue
                 except (ValueError, TypeError, KeyboardInterrupt, IndexError):
-                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                     continue
                 else:
                     print("\n" * 130)
@@ -154,11 +154,11 @@ while parar == False:
             while True:
                 try:
                     tentativa = int(input(f"\n{Jogador2}, tente advinhar o número secreto: "))
-                    if not tentativa > 0 or not tentativa < 101:
-                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    if not tentativa > 0 or not tentativa < 501:
+                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                         continue
                 except (ValueError, TypeError, KeyboardInterrupt, IndexError):
-                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100: \033[m")
+                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500: \033[m")
                     continue
                 else:
                     cont2 += 1
@@ -194,12 +194,12 @@ while parar == False:
             print("\033[m")
             while True:
                 try:
-                    secreto = int(input(f"\n{Jogador2}, escolha um \033[32mnúmero secreto\033[m de 1 a 100: "))
-                    if not secreto > 0 or not secreto < 101:
-                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    secreto = int(input(f"\n{Jogador2}, escolha um \033[32mnúmero secreto\033[m de 1 a 500: "))
+                    if not secreto > 0 or not secreto < 501:
+                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                         continue
                 except (ValueError, TypeError, KeyboardInterrupt, IndexError):
-                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                     continue
                 else:
                     print("\n" * 130)
@@ -210,11 +210,11 @@ while parar == False:
             while True:
                 try:
                     tentativa = int(input(f"\n{Jogador1}, tente advinhar o número secreto: "))
-                    if not tentativa > 0 or not tentativa < 101:
-                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    if not tentativa > 0 or not tentativa < 501:
+                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                         continue
                 except (ValueError, TypeError, KeyboardInterrupt, IndexError):
-                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100: \033[m")
+                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500: \033[m")
                     continue
                 else:
                     cont1 += 1
@@ -363,7 +363,7 @@ while parar == False:
                 else:
                     valido = True
 
-            secreto = randint(1, 100)
+            secreto = randint(1, 500)
             print("\n" * 130)
             print(f"O Computador já escolheu o \033[32mnúmero secreto\033[m!")
             print("")
@@ -371,11 +371,11 @@ while parar == False:
             while True:
                 try:
                     tentativa = int(input(f"\n{Jogador1}, tente advinhar o número secreto: "))
-                    if tentativa < 1 or tentativa > 100:
-                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    if tentativa < 1 or tentativa > 500:
+                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                         continue
                 except (ValueError, TypeError, KeyboardInterrupt, IndexError):
-                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100: \033[m")
+                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500: \033[m")
                     continue
                 else:
                     cont1 += 1
@@ -412,25 +412,25 @@ while parar == False:
 
             while True:
                 try:
-                    secreto = int(input(f"{Jogador1}, escolha um número secreto de 1 a 100: "))
-                    if secreto < 1 or secreto > 100:
-                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    secreto = int(input(f"{Jogador1}, escolha um número secreto de 1 a 500: "))
+                    if secreto < 1 or secreto > 500:
+                        print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                         continue
                 except (ValueError, TypeError, KeyboardInterrupt, IndexError):
-                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 100.\033[m")
+                    print("\n\033[33mERRO! Por favor, escolha um número inteiro de 1 a 500.\033[m")
                     continue
                 else:
                     print("\n" * 130)
                     break
             while tentativa != secreto:
                 if cont2 == 0:
-                    tentativa = randint(46, 55)
+                    tentativa = randint(226, 275)
                     cont2 += 1
                     num_segurança1 = tentativa
                     num_segurança2 = tentativa
                     num_segurança3 = tentativa
                     print(f"O Computador está pensando em um número...")
-                    sleep(4)
+                    sleep(7)
                     print(f"O Computador pensou no número {tentativa:.0f}")
                     if tentativa == secreto:
                         break
@@ -499,7 +499,7 @@ while parar == False:
                             num_segurança1 -= 1
                         if num_segurança2 % 2 != 0:
                             num_segurança2 -= 1
-                        tentativa = num_segurança1 + (100 - num_segurança1) / 2
+                        tentativa = num_segurança1 + (500 - num_segurança1) / 2
                         cont2 += 1
                         print(f"O Computador está pensando em um número...")
                         sleep(7)
